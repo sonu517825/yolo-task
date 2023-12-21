@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "07d86df8-1ca3-4100-bc5f-ac39e295b6a4",
+		"name": "yolo",
+		"description": "yolo api doc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24354122",
+		"_collection_link": "https://martian-desert-15694.postman.co/workspace/415f2a1d-3062-49eb-88be-361aa673aada/collection/24354122-07d86df8-1ca3-4100-bc5f-ac39e295b6a4?action=share&source=collection_link&creator=24354122"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"sonu123yolo\",\r\n    \"password\":\"yolopassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuc2h1bC5yZWVqb25pYUB6eWJpc3lzLmNvbSIsInRpbWVzdGFtcHMiOjE3MDMxNTYxMjk1MzMsImlhdCI6MTcwMzE1NjEyOSwiZXhwIjoxNzAzMjQyNTI5fQ.YhEkL3nwdMFx_Tm4WDeEIWd5tGg4OPOltAmaFI3g-OZ6o9tABYA8y-M-SdSY3OVyn5UnKdv-dGNs4P_wR4Z6Hg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"sonu123yolo\",\r\n    \"password\":\"yolopassword\",\r\n    \"force\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuc2h1bC5yZWVqb25pYUB6eWJpc3lzLmNvbSIsInRpbWVzdGFtcHMiOjE3MDMxNTYxMjk1MzMsImlhdCI6MTcwMzE1NjEyOSwiZXhwIjoxNzAzMjQyNTI5fQ.YhEkL3nwdMFx_Tm4WDeEIWd5tGg4OPOltAmaFI3g-OZ6o9tABYA8y-M-SdSY3OVyn5UnKdv-dGNs4P_wR4Z6Hg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"sonu\",\r\n    \"password\":\"yolopassword\",\r\n    \"force\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbnUxMjN5b2xvIiwidGltZXN0YW1wcyI6MTcwMzE4MDU0NDQyMywiaWF0IjoxNzAzMTgwNTQ0LCJleHAiOjE3MDMxODExNDR9.LM-kmbTFb0ujl0h5qINhENX1-ZZGE8_xb4wZkLCUahs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbnUiLCJ0aW1lc3RhbXBzIjoxNzAzMTgzNTkyMjcxLCJpYXQiOjE3MDMxODM1OTIsImV4cCI6MTcwMzE4NTM5Mn0.zf0vLNLdBBNRIlap48D8V-3JIDBRx2B_-ARl83dfve4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbnUiLCJ0aW1lc3RhbXBzIjoxNzAzMTgzNTkyMjcxLCJpYXQiOjE3MDMxODM1OTIsImV4cCI6MTcwMzE4NTM5Mn0.zf0vLNLdBBNRIlap48D8V-3JIDBRx2B_-ARl83dfve4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sonu\",\r\n    \"address\": \"banglore\",\r\n    \"email\": \"email@eamil.com\",\r\n    \"phone\": \"4523456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbnUxMjN5b2xvIiwidGltZXN0YW1wcyI6MTcwMzE4MjM1NTM2NiwiaWF0IjoxNzAzMTgyMzU1LCJleHAiOjE3MDMxODQxNTV9.c_BDPBQoM99HwZACidrozvXpEXdPLKoMn05T98sjUaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sonu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/reset/username",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"reset",
+						"username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbnUiLCJ0aW1lc3RhbXBzIjoxNzAzMTgzNTkyMjcxLCJpYXQiOjE3MDMxODM1OTIsImV4cCI6MTcwMzE4NTM5Mn0.zf0vLNLdBBNRIlap48D8V-3JIDBRx2B_-ARl83dfve4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

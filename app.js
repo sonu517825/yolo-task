@@ -1,22 +1,30 @@
 // pakkage dependency
-const express     = require('express');
-const logger      = require('morgan');
-const dotenv      = require("dotenv")
-const bodyParser  = require('body-parser');
+const express = require('express');
+const logger = require('morgan');
+const dotenv = require("dotenv")
+const bodyParser = require('body-parser');
+const rateLimit = require('express-rate-limit')
+const app = express();
 
-const app         = express();
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minutes
+  limit: 5, // 2 sec.
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+})
 
 // app configration
 dotenv.config();
+app.use(limiter)
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // modules dependency
-const HttpError   = require('./error/Http_error')
+const HttpError = require('./error/Http_error')
 
 // routers dependency
-const Router      = require('./routes/UserRouter')
+const Router = require('./routes/UserRouter')
 
 // app routing
 
